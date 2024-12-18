@@ -10,5 +10,5 @@ fi
 
 mkdir -p -- "$FEEDS_OUTPUT_DIR"
 curl --fail https://github.blog/changelog/feed/ \
-	| uv run github-changelog/filter.py \
+	| python3 github-changelog/filter.py \
 	> "$FEEDS_OUTPUT_DIR/github-changelog.xml"

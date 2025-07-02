@@ -10,7 +10,7 @@ from pprint import pprint
 from defusedxml.ElementTree import parse, tostring
 from xml.etree.ElementTree import Comment
 
-ignored_titles_re = re.compile('secret scanning|copilot|GitHub Models|enterprise|CodeQL|code scanning|Codespaces', flags=re.IGNORECASE)
+ignored_titles_re = re.compile('secret scanning|copilot|GitHub Models|enterprise|CodeQL|code scanning|Codespaces|dependabot', flags=re.IGNORECASE)
 
 dom = parse(sys.stdin)
 channel = dom.find('channel')
